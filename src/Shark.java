@@ -1,4 +1,7 @@
-public class Shark extends Fish implements Actions {
+public class Shark extends Fish implements Feed,Swim {
+    public Shark (String species, String sex, int age, String commonName) {
+        super(species, sex, age, commonName);
+    }
 
     @Override
     public void feed() {
@@ -6,7 +9,7 @@ public class Shark extends Fish implements Actions {
     }
 
     @Override
-    public void move() {
+    public void swim() {
         System.out.println("The shark is swimming...");
     }
 }

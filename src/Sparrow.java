@@ -1,4 +1,7 @@
-public class Sparrow extends Bird implements Actions {
+public class Sparrow extends Bird implements Feed, Fly {
+    public Sparrow(String species, String sex, int age, String commonName) {
+        super(species, sex, age, commonName);
+    }
 
     @Override
     public void feed() {
@@ -6,7 +9,7 @@ public class Sparrow extends Bird implements Actions {
     }
 
     @Override
-    public void move() {
+    public void fly() {
         System.out.println("The sparrow is flying...");
     }
 }

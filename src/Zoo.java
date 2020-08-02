@@ -8,17 +8,23 @@ public class Zoo {
 
     public void addBird(Bird bird) {
         aviary.add(bird);
-        System.out.println("A bird has been added to the aviary at the zoo.\n");
+        System.out.println("A bird, namely a " + bird.sex + " " + bird.species + ", which is " + bird.age
+                + " years old, commonly known as " + bird.commonName
+                + ", has been added to the aviary at the zoo.\n");
     }
 
     public void addAnimal(Animal animal) {
         cage.add(animal);
-        System.out.println("An animal has been added to the cage at the zoo.\n");
+        System.out.println("An animal, namely a " + animal.sex + " " + animal.species + ", which is "
+                + animal.age + " years old, commonly known as " + animal.commonName
+                + ", has been added to the cage at the zoo.\n");
     }
 
     public void addFish(Fish fish) {
         aquarium.add(fish);
-        System.out.println("A fish has been added to the aquarium at the zoo.\n");
+        System.out.println("A fish, namely a " + fish.sex + " " + fish.species + ", which is " + fish.age
+                + " years old, commonly known as " + fish.commonName
+                + ", has been added to the aquarium at the zoo.\n");
     }
 
     public void feed() {
@@ -36,13 +42,13 @@ public class Zoo {
 
     public void move() {
         for (Animal animal : cage) {
-            animal.move();
+            animal.walk();
         }
         for (Bird bird : aviary) {
-            bird.move();
+            bird.fly();
         }
         for (Fish fish : aquarium) {
-            fish.move();
+            fish.swim();
         }
         System.out.println();
     }
