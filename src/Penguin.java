@@ -1,4 +1,4 @@
-public class Penguin extends Bird implements Feed, Fly {
+public class Penguin extends Animal {
     public Penguin(String species, String sex, int age, String commonName) {
         super(species, sex, age, commonName);
     }
@@ -9,7 +9,16 @@ public class Penguin extends Bird implements Feed, Fly {
     }
 
     @Override
-    public void fly() {
-        System.out.println("The penguin can't fly, so it is swimming...");
+    public void walk() {
+        System.out.println("The penguin can't fly, so it is walking...");
     }
+
+    @Override
+    public void swim() {
+        System.out.println("Also, the penguin is swimming...");
+    };
+
+    @Override
+    public void fly() {};
+
 }

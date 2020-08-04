@@ -1,4 +1,4 @@
-public class Tiger extends Animal implements Feed, Walk {
+public class Tiger extends Animal {
     public Tiger(String species, String sex, int age, String commonName) {
         super(species, sex, age, commonName);
     }
@@ -12,4 +12,10 @@ public class Tiger extends Animal implements Feed, Walk {
     public void walk() {
         System.out.println("The tiger is pacing...");
     }
+
+    @Override
+    public void fly() {};
+
+    @Override
+    public void swim() {};
 }
