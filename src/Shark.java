@@ -1,4 +1,4 @@
-public class Shark extends Fish implements Feed,Swim {
+public class Shark extends Animal {
     public Shark (String species, String sex, int age, String commonName) {
         super(species, sex, age, commonName);
     }
@@ -12,4 +12,10 @@ public class Shark extends Fish implements Feed,Swim {
     public void swim() {
         System.out.println("The shark is swimming...");
     }
+
+    @Override
+    public void walk() {};
+
+    @Override
+    public void fly() {};
 }
